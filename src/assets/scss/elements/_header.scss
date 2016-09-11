@@ -1,0 +1,77 @@
+#HeaderBar {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &:before {
+    height: 80%;
+    top: 0;
+    background: #333;
+    box-shadow: 0 3px 15px rgba(0,0,0,.3);
+  }
+
+  &:after {
+    height: 20%;
+    bottom: 0;
+    z-index: -2;
+    background: #ad2f26;
+  }
+
+
+  .brand-name {
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    width: 131px;
+    height: 144px;
+    margin-right: 60px;
+    background: url('../imgs/logo.png');
+    @include font-size(0);
+    @extend %hide-text;
+  }
+
+  .nav-links {
+    li {
+      display: inline-block;
+      font-family: 'Bungee', sans-serif;
+
+        @include font-size(1);
+      a {
+        color: #fcb779;
+        transition: all 300ms ease-in-out;
+      }
+      &.active a, a:hover {
+        color: #af2f26;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .login-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'Lobster', cursive;
+    @include font-size(1.2);
+    width: 125px;
+    height: 40px;
+    background: #19616b;
+    border: none;
+    color: #fff;
+  }
+
+}

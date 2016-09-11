@@ -1,0 +1,465 @@
+@font-face {
+  font-family: 'Bungee';
+  src: url("../fonts/Bungee/bungee-regular.woff2") format("woff2"), url("../fonts/Bungee/bungee-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url("../fonts/Lobster/lobster-regular.woff2") format("woff2"), url("../fonts/Lobster/lobster-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin Bold';
+  src: url("../fonts/Cabin/cabin-bold.woff2") format("woff2"), url("../fonts/Cabin/cabin-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin Italic';
+  src: url("../fonts/Cabin/cabin-italic.woff2") format("woff2"), url("../fonts/Cabin/cabin-italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url("../fonts/Cabin/cabin-regular.woff2") format("woff2"), url("../fonts/Cabin/cabin-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#HeaderBar .brand-name, #ProductList .category-header h2.category-name {
+  overflow: hidden;
+  text-indent: 100%;
+}
+
+.wrapper:before, #ContentArea:before, footer:before, footer #FooterLinks:before, #Menu .menu-info:before, #ProductList ul:before, .wrapper:after, #ContentArea:after, footer:after, footer #FooterLinks:after, #Menu .menu-info:after, #ProductList ul:after {
+  content: '';
+  display: table;
+}
+
+.wrapper:after, #ContentArea:after, footer:after, footer #FooterLinks:after, #Menu .menu-info:after, #ProductList ul:after {
+  clear: both;
+}
+
+/* Import all files for setup */
+html, body,
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: #333;
+  font-family: "Cabin";
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#ContentArea {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  position: relative;
+}
+
+/* Setup all typography */
+h1, h2, h3 {
+  font-family: 'Bungee', sans-serif;
+}
+
+p {
+  color: #bebebe;
+}
+
+p > a {
+  color: #fff;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+#HeaderBar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#HeaderBar:before, #HeaderBar:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#HeaderBar:before {
+  height: 80%;
+  top: 0;
+  background: #333;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+#HeaderBar:after {
+  height: 20%;
+  bottom: 0;
+  z-index: -2;
+  background: #ad2f26;
+}
+
+#HeaderBar .brand-name {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  width: 131px;
+  height: 144px;
+  margin-right: 60px;
+  background: url("../imgs/logo.png");
+  font-size: 0px;
+  font-size: 0rem;
+}
+
+#HeaderBar .nav-links li {
+  display: inline-block;
+  font-family: 'Bungee', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+#HeaderBar .nav-links li a {
+  color: #fcb779;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#HeaderBar .nav-links li.active a, #HeaderBar .nav-links li a:hover {
+  color: #af2f26;
+}
+
+#HeaderBar .nav-links li:not(:last-child) {
+  margin-right: 30px;
+}
+
+#HeaderBar .login-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: 'Lobster', cursive;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  width: 125px;
+  height: 40px;
+  background: #19616b;
+  border: none;
+  color: #fff;
+}
+
+footer {
+  background: #333;
+  padding: 30px 100px 45px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .olo-link {
+  color: #fff;
+  float: left;
+}
+
+footer #FooterLinks {
+  float: right;
+}
+
+footer #FooterLinks a {
+  position: relative;
+  color: #fff;
+}
+
+footer #FooterLinks a:not(:last-child):after {
+  content: '|';
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#Menu {
+  width: 700px;
+  float: left;
+}
+
+#Menu #MenuHeader {
+  padding-bottom: 30px;
+}
+
+#Menu .menu-header {
+  padding-bottom: 15px;
+}
+
+#Menu .menu-header h2 {
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+#Menu .menu-header .address {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Cabin';
+}
+
+#Menu .menu-header .address a {
+  color: #af2f26;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Menu .menu-header .address a span {
+  margin-right: 5px;
+}
+
+#Menu .menu-info {
+  margin: 0;
+  padding: 0;
+}
+
+#Menu .menu-info dt {
+  float: left;
+}
+
+#Menu .menu-info dd {
+  text-align: right;
+}
+
+#CategoryList {
+  width: 180px;
+  float: left;
+  margin-right: 5px;
+}
+
+#CategoryList .category {
+  background: #333;
+  color: #fff;
+  margin-bottom: 2px;
+  text-align: center;
+  font-family: 'Bungee';
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#CategoryList .category.selected-category, #CategoryList .category:hover {
+  background: #af2f26;
+}
+
+#ProductList {
+  float: right;
+  width: 500px;
+}
+
+#ProductList .category-header h2.category-name {
+  background: url("../imgs/Burger-Category-Header.jpg");
+  width: 100%;
+  height: 140px;
+  margin: 0;
+  padding: 0;
+}
+
+#ProductList .category-header .category-description {
+  margin-top: 2px;
+  padding: 5px 10px;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  background: #333;
+  color: #fff;
+}
+
+#ProductList ul li {
+  width: 47.5%;
+  float: left;
+  margin-right: 2.5%;
+  min-height: 320px;
+  margin-bottom: 30px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#ProductList ul li:hover {
+  background: #fff;
+  border-bottom: 2px solid #af2f26;
+}
+
+#ProductList ul li:hover .product-detail span:last-child {
+  display: inline-block;
+}
+
+#ProductList ul li .product-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+
+#ProductList ul li .product-detail {
+  padding: 15px;
+}
+
+#ProductList ul li .product-detail span {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+#ProductList ul li .product-detail span.product-title {
+  font-family: 'Bungee', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #af2f26;
+  text-align: center;
+  display: block;
+}
+
+#ProductList ul li .product-detail span:last-child {
+  display: none;
+}
+
+#ProductList ul li#prod1 .product-image {
+  background: url("../imgs/Products/Classic-Burger.jpg");
+  background-size: cover;
+}
+
+#ProductList ul li#prod2 .product-image {
+  background: url("../imgs/Products/Cheese-Burger.png");
+  background-size: cover;
+}
+
+#ProductList ul li#prod3 .product-image {
+  background: url("../imgs/Products/Bacon-Burger.png");
+  background-size: cover;
+}
+
+#ProductList ul li#prod4 .product-image {
+  background: url("../imgs/Products/Chicken-Burger.png");
+  background-size: cover;
+}
+
+#ProductList ul li#prod5 .product-image {
+  background: url("../imgs/Products/Foos-Burger.png");
+  background-size: cover;
+}
+
+#BasketView {
+  background: #e1a772;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+#BasketView h2 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  line-height: 1;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+#BasketView h2:after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  background: #af2f26;
+}
+
+#BasketView .summary dt, #BasketView .total dt {
+  color: #af2f26;
+  font-weight: 700;
+  font-style: italic;
+  float: left;
+  clear: both;
+}
+
+#BasketView .summary dd, #BasketView .total dd {
+  font-weight: 700;
+  float: right;
+}
+
+body {
+  background: #f2b378;
+  color: #333333;
+}

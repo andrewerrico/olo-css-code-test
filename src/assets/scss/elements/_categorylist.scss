@@ -1,0 +1,18 @@
+#CategoryList {
+  width: 180px;
+  float: left;
+  margin-right: 5px;
+
+  .category {
+    background: #333;
+    color: #fff;
+    margin-bottom: 2px;
+    text-align: center;
+    font-family: 'Bungee';
+
+    transition: all 300ms ease-in-out;
+    &.selected-category, &:hover {
+      background: #af2f26
+    }
+  }
+}

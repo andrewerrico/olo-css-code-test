@@ -1,0 +1,42 @@
+#Menu {
+  width: 700px;
+  float: left;
+
+  #MenuHeader {
+    padding-bottom: 30px;
+  }
+
+  .menu-header {
+    padding-bottom: 15px;
+    h2 {
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+    .address {
+      margin-top: 0;
+      padding-top: 0;
+      font-family: 'Cabin';
+      a {
+        color: #af2f26;
+        display: flex;
+        span {
+          margin-right: 5px;
+        }
+      }
+      .address-change {
+
+      }
+    }
+  }
+  .menu-info {
+    margin: 0;
+    padding: 0;
+    @extend %clearfix;
+    dt {
+      float: left;
+    }
+    dd {
+      text-align: right;
+    }
+  }
+}

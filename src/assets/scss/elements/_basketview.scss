@@ -1,0 +1,39 @@
+#BasketView {
+  background: #e1a772;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  h2 {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    line-height: 1;
+    @include font-size(1);
+    &:after {
+      content: '';
+      width: 90%;
+      height: 2px;
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+      background: #af2f26;
+    }
+  }
+  .summary, .total {
+    dt {
+      color: #af2f26;
+      font-weight: 700;
+      font-style: italic;
+      float: left;
+      clear: both;
+    }
+    dd {
+      font-weight: 700;
+      float: right;
+    }
+  }
+}

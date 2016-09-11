@@ -1,0 +1,16 @@
+/* Setup all typography */
+h1, h2, h3 {
+  font-family: 'Bungee', sans-serif;
+}
+
+p {
+  color: #bebebe;
+  & > a {
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+a {
+  text-decoration: none;
+}

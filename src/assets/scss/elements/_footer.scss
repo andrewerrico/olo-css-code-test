@@ -1,0 +1,30 @@
+footer {
+  background: #333;
+  padding: 30px 100px 45px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @extend %clearfix;
+
+  .olo-link {
+    color: #fff;
+    float: left;
+  }
+  #FooterLinks {
+    float: right;
+    @extend %clearfix;
+    a {
+      position: relative;
+      color: #fff;
+      &:not(:last-child) {
+        &:after {
+          content: '|';
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
